@@ -18,7 +18,8 @@
 
 import asyncio 
 from time import time
-from utils.database import * 
+from utils.info import * 
+from utils.database import *  
 from pyrogram import Client, idle 
 #-------------------------------------------------------------------------------
 bot = Client("auto-delete-bot",
