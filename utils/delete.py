@@ -29,7 +29,6 @@ bot = Client("auto-delete-bot",
 
 async def check_up(bot):   
     _time = int(time()) 
-    print(_time)  
     all_data = get_all_data(_time)
     for data in all_data:
         try:
