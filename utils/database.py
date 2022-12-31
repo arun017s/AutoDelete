@@ -16,7 +16,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #=========================================================================
 
-from .info import * 
+from . import * 
 from pymongo import MongoClient
 
 dbclient = MongoClient(DATABASE_URI)
