@@ -1,0 +1,6 @@
+pyrogram
+tgcrypto
+requests
+gunicorn
+pymongo[srv]
+flask[async] 
