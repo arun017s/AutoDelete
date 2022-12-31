@@ -21,11 +21,13 @@ from time import time
 from subprocess import Popen
 from pyrogram import Client, filters
 
-User = Client("auto-delete-user",
-              session_string=SESSION)
+Bot = Client("auto-delete-bot",
+          api_id=API_ID,
+          api_hash=API_HASH,
+          bot_token=BOT_TOKEN)
 
-@User.on_message(filters.chat(CHATS))
-async def delete(user, message):
+@Bot.on_message(filters.chat(CHATS))
+async def delete(bot, message):
     try:
        if bool(WHITE_LIST):
           if message.from_user.id in WHITE_LIST:
@@ -38,12 +40,12 @@ async def delete(user, message):
     except Exception as e:
        print(str(e))
 
-@User.on_message(filters.regex("!start") & filters.private)
-async def start(user, message):
+@Bot.on_message(filters.command("start") & filters.private)
+async def start(bot, message):
     await message.reply("Hi, I'm alive!")
 
 #==========================================================
 
 Popen(f"gunicorn utils.server:app --bind 0.0.0.0:{PORT}", shell=True)
 Popen("python3 -m utils.delete", shell=True)
-User.run()
+Bot.run()
