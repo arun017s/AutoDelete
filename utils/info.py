@@ -27,5 +27,4 @@ CHATS        = [int(grp) for grp in os.environ.get("GROUPS", "").split()]
 WHITE_LIST   = [int(wht) for wht in os.environ.get("WHITE_LIST", "").split()]
 BLACK_LIST   = [int(blk) for blk in os.environ.get("BLACK_LIST", "").split()]
 DATABASE_URI = os.environ.get("DATABASE_URI", "")
-BASE_URL     = os.environ.get("BASE_URL", "")
 PORT         = os.environ.get("PORT", "8080")
