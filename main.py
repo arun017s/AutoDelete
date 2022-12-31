@@ -16,8 +16,8 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #=========================================================================
 
-from utils import *
 from time import time 
+from utils.info import *
 from subprocess import Popen
 from pyrogram import Client, filters
 
