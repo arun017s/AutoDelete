@@ -16,9 +16,8 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #=========================================================================
 
+from utils import *
 from time import time 
-from utils.info import *
-from utils.database import *
 from subprocess import Popen
 from pyrogram import Client, filters
 
@@ -42,5 +41,5 @@ async def delete(user, message):
 #==========================================================
 
 Popen(f"gunicorn utils.server:app --bind 0.0.0.0:{PORT}", shell=True)
-Popen("python3 utils/delete.py", shell=True)
+Popen("python3 -m utils.delete", shell=True)
 User.run()
