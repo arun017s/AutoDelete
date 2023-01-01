@@ -14,7 +14,7 @@ Telegram bot to delete messages after specific time
 9. `BLACK_LIST` : only message from these users will be deleted (User ID seperated by spaces) - Optional 
 
 ## Branches
-- ```main``` - Works with userbot. It delete all types of messages  (```SESSION``` variable is required)
+- ```main``` - Works with user account. It delete all types of messages  (```SESSION``` variable is required)
 - ```bot-only``` - Works with bot. It does not delete messages coming from bots (```SESSION``` variable not required)
 
 ## Make sure: 
