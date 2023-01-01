@@ -13,25 +13,34 @@ Telegram bot to delete messages after specific time
 8. `WHITE_LIST` : messages from these users will not be deleted (User ID seperated by spaces) - Optional 
 9. `BLACK_LIST` : only message from these users will be deleted (User ID seperated by spaces) - Optional 
 
+## Branches
+- ```main``` - Works with userbot. It delete all types of messages  (```SESSION``` variable is required)
+- ```bot-only``` - Works with bot. It does not delete messages coming from bots (```SESSION``` variable not required)
+
 ## Make sure: 
 - Bot is admin in Chats with delete permission
 - Account used to create `SESSION` is a member in Chats
 
-
 ## Deployment
+You can fork and deploy this bot on any server (Render, Koyeb, Railway, Heroku.. etc)
+<br>Remember to create variables!
+<br>Some deployement options are mentioned below:
 
 <details><summary>Koyeb</summary>
 <br>
-<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/arun017s/AutoDelete&branch=main">
+<a href="https://app.koyeb.com/deploy?type=git&repository=github.com/arun017s/AutoDelete">
   <img src="https://www.koyeb.com/static/images/deploy/button.svg" alt="deploy-to-koyeb">
-</a><br>
+</a>
+<br>
 Remember to create variables</details>
 
 <details><summary>Railway</summary>
 <br>
 <a href="https://railway.app/new/template/mYFm9G?referralCode=Dxh7zU">
   <img src="https://railway.app/button.svg" alt="deploy-to-railway">
-</a></details>
+</a>
+<br>
+Remember to deploy the latest version</details>
 
 <details>
 <summary>VPS</summary>
