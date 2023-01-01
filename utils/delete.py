@@ -47,4 +47,4 @@ async def run_check_up():
            await asyncio.sleep(1)
     
 if __name__=="__main__":   
-   asyncio.get_event_loop().run_until_complete(run_check_up())
+   asyncio.run(run_check_up())
