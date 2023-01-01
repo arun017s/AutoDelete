@@ -21,7 +21,7 @@ from time import time
 from subprocess import Popen
 from pyrogram import Client, filters
 
-User = Client("auto-delete-user",
+User = Client("auto-delete-user",api_id=API_ID,api_hash=API_HASH,
               session_string=SESSION)
 
 @User.on_message(filters.chat(CHATS))
